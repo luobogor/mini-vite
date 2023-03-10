@@ -20,8 +20,7 @@ function createServer() {
     // 解析 .vue 请求
     // - 无 type：将 .vue 解析成 .js，该 js 文件让浏览器再次发请求，通过 query.type 参数区分加载 SFC 各个模块
     // - type 为 template：将 template 变成可执行的 render 方法
-    // - type 为 script：...
-    // - type 为 style：...
+    // - type 为 style：返回可执行的 js 脚本更新 style
     vuePlugin,
     // 静态服务返回 html 文件
     serverStaticPlugin,
